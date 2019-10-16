@@ -1,0 +1,34 @@
+TestItems,Group,Function,Command,RecSuffix,ValueType,ValueSave,Typ,Low,Up,Unit,TimeOut,Delay,ExitEnable,Skip
+Show dialog,MCU,Dialog,Connect DUT; OK?,,,,,,,,2,0.1,0,1
+Reset,MCU,Serial,reset,n,string,0,OK,,,,2,0.1,0,0
+Set LED on,MCU,Serial,set LED on,n,string,0,OK,,,,2,0.1,0,0
+Set LED off,MCU,Serial,set LED off,n,string,0,OK,,,,2,0.1,0,0
+Check status,MCU,Serial,check status,n,string,0,FAIL,,,,2,0.1,0,0
+Reset,MCU,Serial,reset,n,string,0,OK,,,,2,0.1,0,0
+Set LED on,MCU,Serial,set LED on,n,string,0,OK,,,,2,0.1,0,0
+Set LED off,MCU,Serial,set LED off,n,string,0,OK,,,,2,0.1,0,0
+Check status,MCU,Serial,check status,n,string,0,FAIL,,,,2,0.1,0,0
+Reset,MCU,Serial,reset,n,string,0,OK,,,,2,0.1,0,0
+Set LED on,MCU,Serial,set LED on,n,string,0,OK,,,,2,0.1,0,0
+Set LED off,MCU,Serial,set LED off,n,string,0,OK,,,,2,0.1,0,0
+Check status,MCU,Serial,check status,n,string,0,FAIL,,,,2,0.1,0,0
+Read temperature,MCU,Serial,readTmp,n,value,0,,32.6,42.1,C,2,0.1,0,0
+Read step,MCU,Serial,readStep,n,value,0,,50,65,Step,2,0.1,0,0
+Execute async task,MCU,Async,dialog,n,string,0,,,,,2,0.1,0,0
+Read voltage,MCU,Serial,readVolt1,n,value,0,,3.75,5.21,V,2,0.1,0,0
+Read open/short,MCU,OpenShort,FETC?,n,string,1,,,,,2,0.1,0,0
+check open resistant1,MCU,CheckFB,0,n,value,0,,100000,,ohm,2,0.1,0,0
+check open resistant2,MCU,CheckFB,1,n,value,0,,100000,,ohm,2,0.1,0,0
+check open resistant3,MCU,CheckFB,2,n,value,0,,100000,,ohm,2,0.1,0,0
+check open resistant4,MCU,CheckFB,3,n,value,0,,100000,,ohm,2,0.1,0,0
+check open resistant5,MCU,CheckFB,4,n,value,0,,100000,,ohm,2,0.1,0,0
+check open resistant6,MCU,CheckFB,5,n,value,0,,100000,,ohm,2,0.1,0,1
+Check status,MCU,Serial,check status,n,string,0,FAIL,,,,2,0.1,0,0
+Execute async task,MCU,Sync,dialog,n,string,0,,,,,2,0.1,0,0
+Read temperature,MCU,Serial,readTmp,n,value,0,,32.6,42.1,C,2,0.1,0,0
+Read step,MCU,Serial,readStep,n,value,0,,50,65,Step,2,0.1,0,0
+Read voltage,MCU,Serial,readVolt1,n,value,0,,3.75,5.21,V,2,0.1,0,0
+Check status,MCU,Serial,check status,n,string,0,FAIL,,,,2,0.1,0,0
+Read temperature,MCU,Serial,readTmp,n,value,0,,32.6,42.1,C,2,0.1,0,0
+Read step,MCU,Serial,readStep,n,value,0,,50,65,Step,2,0.1,0,0
+Read voltage,MCU,Serial,readVolt1,n,value,0,,3.75,5.21,V,2,0.1,0,0

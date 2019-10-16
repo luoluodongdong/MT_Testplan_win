@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0E539254-4465-4B9F-B2A4-22750DF0920B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MT_ICT</RootNamespace>
+    <AssemblyName>MT_ICT</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon002_128px_510869_easyicon.net.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="3497xx, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\3497xx.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DetialView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetialView.Designer.cs">
+      <DependentUpon>DetialView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dialog.Designer.cs">
+      <DependentUpon>Dialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MT_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MT_Form.Designer.cs">
+      <DependentUpon>MT_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myClass\CheckSecurity.cs" />
+    <Compile Include="myClass\JsonHelper.cs" />
+    <Compile Include="myClass\ListViewNF.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="myClass\LoadTestPlan.cs" />
+    <Compile Include="myClass\OPINI.cs" />
+    <Compile Include="myConfigView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="myConfigView.Designer.cs">
+      <DependentUpon>myConfigView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myInstrumentUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="myInstrumentUC.Designer.cs">
+      <DependentUpon>myInstrumentUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myDeviceUC.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="myDeviceUC.Designer.cs">
+      <DependentUpon>myDeviceUC.cs</DependentUpon>
+    </Compile>
+    <Compile Include="myUserControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="myUserControl.Designer.cs">
+      <DependentUpon>myUserControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Password.Designer.cs">
+      <DependentUpon>Password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="MT_LogView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MT_LogView.Designer.cs">
+      <DependentUpon>MT_LogView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ScanSN_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ScanSN_Form.Designer.cs">
+      <DependentUpon>ScanSN_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Welcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Welcome.Designer.cs">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DetialView.resx">
+      <DependentUpon>DetialView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dialog.resx">
+      <DependentUpon>Dialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MT_Form.resx">
+      <DependentUpon>MT_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myConfigView.resx">
+      <DependentUpon>myConfigView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myInstrumentUC.resx">
+      <DependentUpon>myInstrumentUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myDeviceUC.resx">
+      <DependentUpon>myDeviceUC.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="myUserControl.resx">
+      <DependentUpon>myUserControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Password.resx">
+      <DependentUpon>Password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MT_LogView.resx">
+      <DependentUpon>MT_LogView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ScanSN_Form.resx">
+      <DependentUpon>ScanSN_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Welcome.resx">
+      <DependentUpon>Welcome.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="yield.CFG">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="cfg.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diamond_128px_1133605_easyicon.net.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icon002_128px_510869_easyicon.net.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon002_128px_510869_easyicon.net.ico" />
+    <None Include="Resources\settings_128px_1234895_easyicon.net.png" />
+    <None Include="Resources\arrow_right_72px.png" />
+    <None Include="Resources\close_72px.png" />
+    <None Include="Resources\white1234.jpg" />
+    <None Include="Resources\ok_72p.png" />
+    <None Include="Resources\welcomepic.png" />
+    <None Include="Resources\refresh1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

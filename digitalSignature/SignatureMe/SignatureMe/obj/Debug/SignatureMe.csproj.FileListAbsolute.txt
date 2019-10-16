@@ -1,0 +1,10 @@
+D:\windowCode\CsharpCode\MT_TestPlan\digitalSignature\SignatureMe\SignatureMe\bin\Debug\SignatureMe.exe.config
+D:\windowCode\CsharpCode\MT_TestPlan\digitalSignature\SignatureMe\SignatureMe\bin\Debug\SignatureMe.exe
+D:\windowCode\CsharpCode\MT_TestPlan\digitalSignature\SignatureMe\SignatureMe\bin\Debug\SignatureMe.pdb
+D:\windowCode\CsharpCode\MT_TestPlan\digitalSignature\SignatureMe\SignatureMe\obj\Debug\SignatureMe.csprojAssemblyReference.cache
+D:\windowCode\CsharpCode\MT_TestPlan\digitalSignature\SignatureMe\SignatureMe\obj\Debug\SignatureMe.Form1.resources
+D:\windowCode\CsharpCode\MT_TestPlan\digitalSignature\SignatureMe\SignatureMe\obj\Debug\SignatureMe.Properties.Resources.resources
+D:\windowCode\CsharpCode\MT_TestPlan\digitalSignature\SignatureMe\SignatureMe\obj\Debug\SignatureMe.csproj.GenerateResource.cache
+D:\windowCode\CsharpCode\MT_TestPlan\digitalSignature\SignatureMe\SignatureMe\obj\Debug\SignatureMe.csproj.CoreCompileInputs.cache
+D:\windowCode\CsharpCode\MT_TestPlan\digitalSignature\SignatureMe\SignatureMe\obj\Debug\SignatureMe.exe
+D:\windowCode\CsharpCode\MT_TestPlan\digitalSignature\SignatureMe\SignatureMe\obj\Debug\SignatureMe.pdb
