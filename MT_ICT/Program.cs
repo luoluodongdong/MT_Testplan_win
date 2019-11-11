@@ -48,6 +48,7 @@ namespace MT_ICT
             //做需要的事情
             //开启主窗体
             MT_Form mainform = new MT_Form();
+            mainform.loginMsg = Splash.infoDict;
             Application.Run(mainform);
         }
     }

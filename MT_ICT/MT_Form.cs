@@ -14,6 +14,7 @@ namespace MT_ICT
 {
     public partial class MT_Form : Form
     {
+        public Dictionary<string, string> loginMsg;
         public MT_Form()
         {
             InitializeComponent();
@@ -227,6 +228,9 @@ namespace MT_ICT
             Thread.Sleep(1000);
             Splash.Close();
 
+            //显示登陆界面录入的信息
+            string userName = loginMsg["user"];
+            UserLabel.Text = "User:"+userName;
         }
 
         private void MT_Form_KeyDown(object sender, KeyEventArgs e)

@@ -49,13 +49,14 @@
             this.lb_pass = new System.Windows.Forms.Label();
             this.lb_input = new System.Windows.Forms.Label();
             this.SetPage = new System.Windows.Forms.TabPage();
+            this.mtCfgBtn = new System.Windows.Forms.Button();
             this.rb_debugMode = new System.Windows.Forms.RadioButton();
             this.rb_testMode = new System.Windows.Forms.RadioButton();
             this.lb_swName = new System.Windows.Forms.Label();
             this.lb_swVersion = new System.Windows.Forms.Label();
             this.lb_debug = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.mtCfgBtn = new System.Windows.Forms.Button();
+            this.UserLabel = new System.Windows.Forms.Label();
             this.tc_mainPanel.SuspendLayout();
             this.TestPage.SuspendLayout();
             this.gb_loop.SuspendLayout();
@@ -266,6 +267,16 @@
             this.SetPage.Text = "Set";
             this.SetPage.UseVisualStyleBackColor = true;
             // 
+            // mtCfgBtn
+            // 
+            this.mtCfgBtn.Location = new System.Drawing.Point(63, 192);
+            this.mtCfgBtn.Name = "mtCfgBtn";
+            this.mtCfgBtn.Size = new System.Drawing.Size(98, 34);
+            this.mtCfgBtn.TabIndex = 2;
+            this.mtCfgBtn.Text = "Config";
+            this.mtCfgBtn.UseVisualStyleBackColor = true;
+            this.mtCfgBtn.Click += new System.EventHandler(this.MtCfgBtn_Click);
+            // 
             // rb_debugMode
             // 
             this.rb_debugMode.AutoSize = true;
@@ -292,9 +303,9 @@
             // lb_swName
             // 
             this.lb_swName.Font = new System.Drawing.Font("微软雅黑", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lb_swName.Location = new System.Drawing.Point(35, 25);
+            this.lb_swName.Location = new System.Drawing.Point(12, 16);
             this.lb_swName.Name = "lb_swName";
-            this.lb_swName.Size = new System.Drawing.Size(772, 46);
+            this.lb_swName.Size = new System.Drawing.Size(557, 46);
             this.lb_swName.TabIndex = 1;
             this.lb_swName.Text = "SW Name";
             this.lb_swName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -302,7 +313,7 @@
             // lb_swVersion
             // 
             this.lb_swVersion.AutoSize = true;
-            this.lb_swVersion.Location = new System.Drawing.Point(926, 62);
+            this.lb_swVersion.Location = new System.Drawing.Point(612, 60);
             this.lb_swVersion.Name = "lb_swVersion";
             this.lb_swVersion.Size = new System.Drawing.Size(62, 20);
             this.lb_swVersion.TabIndex = 2;
@@ -313,7 +324,7 @@
             this.lb_debug.AutoSize = true;
             this.lb_debug.Font = new System.Drawing.Font("微软雅黑", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lb_debug.ForeColor = System.Drawing.Color.Red;
-            this.lb_debug.Location = new System.Drawing.Point(877, 9);
+            this.lb_debug.Location = new System.Drawing.Point(564, 9);
             this.lb_debug.Name = "lb_debug";
             this.lb_debug.Size = new System.Drawing.Size(167, 52);
             this.lb_debug.TabIndex = 4;
@@ -323,21 +334,21 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // mtCfgBtn
+            // UserLabel
             // 
-            this.mtCfgBtn.Location = new System.Drawing.Point(63, 192);
-            this.mtCfgBtn.Name = "mtCfgBtn";
-            this.mtCfgBtn.Size = new System.Drawing.Size(98, 34);
-            this.mtCfgBtn.TabIndex = 2;
-            this.mtCfgBtn.Text = "Config";
-            this.mtCfgBtn.UseVisualStyleBackColor = true;
-            this.mtCfgBtn.Click += new System.EventHandler(this.MtCfgBtn_Click);
+            this.UserLabel.AutoSize = true;
+            this.UserLabel.Location = new System.Drawing.Point(868, 16);
+            this.UserLabel.Name = "UserLabel";
+            this.UserLabel.Size = new System.Drawing.Size(136, 20);
+            this.UserLabel.TabIndex = 5;
+            this.UserLabel.Text = "User:1234567890";
             // 
             // MT_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1082, 668);
+            this.Controls.Add(this.UserLabel);
             this.Controls.Add(this.lb_debug);
             this.Controls.Add(this.lb_swVersion);
             this.Controls.Add(this.lb_swName);
@@ -397,6 +408,7 @@
         private System.Windows.Forms.Label lb_showLoopCount;
         private System.Windows.Forms.Button btn_loopAbort;
         private System.Windows.Forms.Button mtCfgBtn;
+        private System.Windows.Forms.Label UserLabel;
     }
 }
 

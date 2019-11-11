@@ -11,7 +11,7 @@ using System.Threading;
 
 namespace MT_ICT
 {
-    public delegate void MsgFromWelcomPageEvent(string msg);
+    public delegate void MsgFromWelcomPageEvent(string msg,Dictionary<string,string> content);
     public partial class Welcome : Form
     {
         public string _userName = "123";
@@ -46,7 +46,10 @@ namespace MT_ICT
                 loginPanel.Visible = false;
                 progressBar1.Visible = true;
                 ControlBox = false;
-                sendMsgToTT("login");
+                Dictionary<string, string> content = new Dictionary<string, string>();
+                content.Add("user", "auto");
+                content.Add("password", "na");
+                sendMsgToTT("login",content);
             }
             Activate();
             Console.WriteLine("welcome form load done.");
@@ -119,16 +122,16 @@ namespace MT_ICT
 
         private void Welcome_FormClosing(object sender, FormClosingEventArgs e)
         {
-            sendMsgToTT("close");
+            Dictionary<string, string> content = new Dictionary<string, string>();
+            content.Add("user", "na");
+            content.Add("password", "na");
+            sendMsgToTT("close",content);
         }
 
         private void okBtn_Click(object sender, EventArgs e)
         {
-      
-            loginPanel.Visible = false;
-            sendMsgToTT("login");
-            progressBar1.Visible = true;
-            progressBar1.Value = 5;
+
+            willLogin();
         }
         private void willLogin()
         {
@@ -139,7 +142,10 @@ namespace MT_ICT
                 //隐藏标题栏按钮
                 this.ControlBox = false;
                 loginPanel.Visible = false;
-                sendMsgToTT("login");
+                Dictionary<string, string> content = new Dictionary<string, string>();
+                content.Add("user", _userName);
+                content.Add("password", _password);
+                sendMsgToTT("login",content);
                 progressBar1.Visible = true;
                 progressBar1.Value = 5;
             }
@@ -199,6 +205,7 @@ namespace MT_ICT
 
         static Welcome MySplashForm = null;
         static Thread MySplashThread = null;
+        static public Dictionary<string, string> infoDict = new Dictionary<string, string>();
         //登陆是否OK
         static public bool loginIsOk = false;
         //点击关闭窗体按钮
@@ -226,8 +233,9 @@ namespace MT_ICT
             MySplashForm.sendMsgToTT += new MsgFromWelcomPageEvent(msgFromWelcomePage);
             Application.Run(MySplashForm);
         }
-        private static void msgFromWelcomePage(string msg)
+        private static void msgFromWelcomePage(string msg,Dictionary<string,string> content)
         {
+            infoDict = content;
             if(msg == "login")
             {
                 loginIsOk = true;
